@@ -527,3 +527,23 @@ body.section-ergo-control .sl {
     margin-bottom:0.5em;
     font-size: 80%;
 }
+
+.template-magazine-view div.tileItem {
+    float: left;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.template-magazine-view h2 {
+    font-size:70%;
+}
+
+.template-magazine-view div.tileImage {
+    height: 100px;
+    width: 198px;
+    overflow-y: hidden;
+}
+
+hr, #socialtools {
+    margin-bottom: 0.5em;
+}

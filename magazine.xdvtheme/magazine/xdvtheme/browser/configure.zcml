@@ -20,4 +20,11 @@
         action="@@magazine-view"
         description="Folder Magazine view"
         />
+    
+    <browser:page
+         name="standard_view"
+         permission="zope2.View"
+         for="plone.app.folder.folder.IATUnifiedFolder"
+         template="templates/standard_view.pt"
+         />
 </configure>

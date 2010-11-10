@@ -28,6 +28,8 @@
     <replace css:theme="#portal-siteactions" css:content="#portal-siteactions" />
     <replace css:theme="#portal-searchbox" css:content="#portal-searchbox" />
 
+    <replace css:theme="#sitename" css:content="#portal-logo" />
+    "
     <!-- Global navigation -->
     <copy css:theme="#sitenav" css:content="#portal-globalnav > *" />
     <!-- subnav? -->
