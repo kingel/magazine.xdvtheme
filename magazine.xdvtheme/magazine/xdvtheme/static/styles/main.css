@@ -1,0 +1,517 @@
+/* @group CSS Reset */
+
+/* Remove implicit browser styles to have a neutral starting point:
+   - No elements should have implicit margin/padding
+   - When we want markers on lists, we will be explicit about it, and
+they render inline by default
+   - Browsers are inconsistent about hX/pre/code, reset
+   - Linked images should not have borders
+   */
+* { margin: 0; padding: 0; }
+* ul,ol { list-style:none; }
+* a img,:link img,:visited img { border:none }
+a { outline: none; text-decoration: none; }
+table { border-spacing: 0; }
+img { vertical-align: text-bottom; }
+input::-moz-focus-inner /*Remove button padding in FF*/ { border: 0; padding: 0; }
+/* @end */
+
+.visualClear { clear: both; }
+#edit-bar { font-size: 100% !important; }
+
+/* @group Search results page */
+
+form.searchPage {
+    text-align:center;
+}
+
+input.searchPage {
+    font-size:200% !important;
+}
+
+/* @end */
+
+
+/* @group Image alignment classes */
+
+.image-left {
+   float: left;
+   clear: both;
+   margin: 0.5em 1em 0.5em 0;
+}
+.image-right {
+   float: right;
+   clear: both;
+   margin: 0.5em;
+}
+.image-inline {
+   float: none;
+}
+/*note: the tricky thing here is that image-inline|image-left|
+image-right
+can both be on an image and a wrapper element e.g. a dl tag*/
+img.image-left,
+img.image-right,
+.captioned img {
+    border: 1px solid #ddd;
+}
+dd.image-caption {
+    text-align: left;
+    padding: 0 0 0 3px; /*image padding+border with*/
+    margin: 0;
+    color: #666;
+    font-size: 85%;
+}
+
+/* @end */
+
+
+/* @group Table of Contents */
+
+ /*Table of Contents styling - essentially a portlet with smaller fonts
+and aligned right + limited in width*/
+
+dl.toc {
+    float: right;
+    width: 35%;
+    font-size: 100%;
+    margin: 1em 0 0.5em 1.5em;
+}
+dl.toc dt {
+    margin-left: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+dl.toc dd {
+    margin-bottom: 0;
+    padding-left: 2em;
+}
+dl.toc dd ol {
+    margin-left: 1.5em;
+}
+
+/* @end */
+
+/* @group Footer */
+
+/*
+#portal-footer {
+    font-size: 75%;
+    background: #ddd;
+    padding: 1em;
+    margin: 1em 0;
+    line-height: 2em;
+}
+*/
+#portal-colophon {
+    font-size: 70%;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#portal-colophon li {
+    padding:0 0.75em;
+}
+
+#portal-colophon a {
+    color: #444;
+}
+
+/* @end */
+
+/* @group Sitemap */
+
+#portal-sitemap {
+    list-style: none;
+    margin-left: 0;
+    font-size: 130%;
+    font-weight: bold;
+}
+
+#portal-sitemap li {
+    list-style: none;
+    margin-left: 0;
+}
+
+#portal-sitemap a {
+    border-bottom: none;
+    display: block;
+}
+
+#portal-sitemap > li {
+    border-bottom:0.1em dotted #ddd;
+    line-height:1.8em;
+    padding:0.25em 1em;
+    margin-bottom: 0;
+}
+
+#portal-sitemap .navTreeLevel2,
+#portal-sitemap .navTreeLevel2 ul {
+    font-size: 85%;
+    font-weight: normal;
+    margin-bottom: 0;
+    padding: 0.25em 0;
+}
+/* @group Data tables */
+
+table.listing,
+table.plain {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.invisible td,
+table.invisible th,
+table.plain td,
+table.plain th,
+table.listing td,
+table.listing th {
+    padding: 0.5em 1em;
+    vertical-align: top;
+}
+table.plain th,
+table.plain td {
+    border: 1px solid #ddd;
+}
+
+table.listing td.listingCheckbox,
+table.listing th.listingCheckbox {
+    text-align: center;
+}
+
+table.listing th {
+    text-align: left;
+    color: #666;
+    border: 0.1em solid #e7e7e7;
+    border-style: solid none none;
+}
+table.listing tr.odd th {
+    border: 0.1em solid #fff;
+    border-style: solid solid none none;
+}
+table.listing tbody th {
+    font-weight: bold;
+}
+table.listing tbody tr {
+    text-align:left;
+}
+table.listing tbody tr.odd {
+    background: #eee;
+}
+table.listing tbody tr td {
+    background: transparent;
+}
+table.listing tbody tr.odd td {
+    background: #eee;
+}
+table.listing a {
+    line-height: 2em;
+    border: none;
+    display: inline-block;
+    border-bottom: none !important;
+}
+
+table.listing td.draggable {
+    text-shadow: White 1px 1px 1px;
+    background: #ddd !important;
+    border-bottom: 1px solid white;
+    padding: 0.4em 0.4em 0 0.5em;
+}
+/* Vertical table data listings */
+table.vertical {
+}
+table.vertical th {
+    text-align: right;
+}
+table.vertical td {
+    border-top: 0.1em solid #e7e7e7;
+    padding: 0.5em;
+}
+/* Grid table listings */
+table.grid td,
+table.grid th {
+    border: 1px solid #e7e7e7;
+    padding: 0.5em;
+}
+
+.dragindicator {
+    outline: 2px solid #FFD700;
+}
+
+#foldercontents-order-column {
+    padding: 0;
+}
+
+div.listingBar {
+    font-size: 80%;
+    margin: 1em 0;
+}
+
+div.listingBar .next {
+    display: inline-block;
+    float: right;
+}
+
+div.listingBar .previous {
+    display: inline-block;
+}
+
+div.listingBar a {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    border: 0.1em solid #ccc;
+}
+
+div.listingBar a:hover {
+    color: White;
+    background-color: #329fd7;
+    border-color: #329fd7;
+}
+
+/* @end */
+
+
+/* START ERGO CONTROL THEME */
+
+#visual-portal-wrapper {
+	width: 960px;
+	margin: 0 auto;
+	font-family: verdana;
+	font-size: 12px;
+	background: url(../images/circle.png) no-repeat;
+}
+#portal-header {
+	float: left;
+}
+#portal-logo img {
+	margin: 20px 0 0 25px;
+}
+#portal-menu {
+	margin-left: 238px;
+}
+
+#info-bar {
+	height: 45px;
+}
+#info-bar a#home-link{
+	background: url(../images/home.png) no-repeat;
+	width: 25px;
+	height: 29px;
+	cursor: pointer;
+	display: block;
+	float: right;
+	margin: 7px 20px 0 0;
+}
+#info-bar #info-bar-text {
+	text-align: right;
+	margin: 26px 6px 0 0;
+	color: #0067c6;
+	font-size: 9px;
+	float: right;
+}
+#info-bar #info-bar-text a {
+	color: #0067c6;
+}
+#info-bar #info-bar-text a:hover {
+	text-decoration: underline;
+}
+
+#menu-bar {
+	background: #00204e none;
+	height: 17px;
+	overflow: hidden;
+}
+
+#portal-searchbox {
+	float: right;
+	margin: 1px 32px 0 0;
+}
+#portal-searchbox .searchButton,
+#portal-searchbox .searchSection {
+	display: none;
+}
+#portal-searchbox .searchField {
+	width: 100px;
+	height: 11px;
+	font-size: 10px;
+}
+
+#portal-globalnav {
+	padding-left: 174px;
+	height: 17px;
+	overflow: hidden;
+}
+#portal-globalnav li {
+	float: left;
+	padding-right: 38px;
+	line-height: 16px;
+}
+#portal-globalnav li a {
+	font-size: 12px;
+	color: #ffffff;
+}
+
+#portal-subnav {
+	height: 16px;
+	margin: 15px 0 0 174px;
+	overflow: hidden;
+}
+#portal-subnav li {
+	padding-right: 34px;
+	float: left;
+	line-height: 14px;
+}
+#portal-subnav li a {
+	font-size: 11px;
+	color: #0067c6;
+}
+
+#portal-wrapper {
+	clear: both;
+}
+#portal-columns .sl #viewlet-above-content,
+#portal-columns .sl #edit-bar,
+#portal-columns .sl #content {
+	margin-left: 238px;
+}
+body.section-front-page #portal-column-content {
+	background: url(../images/picture-home.jpg) no-repeat;
+	min-height: 358px;
+}
+body.section-fit-form #portal-column-content {
+	background: url(../images/picture-fitform.jpg) no-repeat;
+	min-height: 358px;
+}
+body.section-ergo-control #portal-column-content {
+	background: url(../images/picture-ergocontrol.jpg) no-repeat;
+	min-height: 358px;
+}
+body.section-fit-form .sl {
+	background: url(../images/sub-fitform.jpg) no-repeat right top !important;
+}
+body.section-ergo-control .sl {
+	background: url(../images/sub-ergocontrol.jpg) no-repeat right top !important;
+}
+#portal-column-content {
+	background: url(../images/sub-default.jpg) no-repeat right top;
+}
+
+#portal-column-one {
+	float: left;
+	width: 195px;
+}
+#portal-column-one dl.portletNavigationTree {
+	text-align: right;
+	margin: 25px 0 0;
+}
+#portal-column-one ul.navTree li {
+	margin: 2px 0;
+}
+#portal-column-one ul.navTree li.navTreeTopNode {
+	margin: 0 0 20px;
+}
+#portal-column-one ul.navTree li.navTreeTopNode a {
+	color: #00204e;
+	font-size: 20px;
+	letter-spacing: 1px;	
+}
+#portal-column-one ul.navTree li a {
+	color: #0067c6;
+	font-size: 10px;
+}
+#portal-column-one ul.navTree li.navTreeCurrentNode a {
+	color: #00204e;
+}
+
+#content {	
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 34px;
+	min-height: 270px;
+	}
+
+#bottom {
+	padding: 53px 0 0;
+	background: url(../images/white.png) repeat-x;
+	width: 960px;
+	overflow-x: hidden;
+}
+
+
+#portal-bottomnav {
+	background: #00204e none;
+	height: 17px;
+	padding-left: 238px;
+	overflow: hidden;
+}
+
+#portal-bottomnav li {
+	float: left;
+	padding-right: 38px;
+	line-height: 16px;
+}
+#portal-bottomnav li a {
+	font-size: 12px;
+	color: #ffffff;
+}
+
+#bottom #portlets {
+	width: 964px;
+	position: relative;
+}
+#bottom #portlets #portlets-white {
+	position: absolute;
+	height: 40px;
+	background-color: #ffffff;
+	-moz-opacity:0.5 ;
+	filter:alpha(opacity: 50);
+	opacity: 0.5;
+	width: 960px;
+}
+
+
+#bottom .portlet {
+	float: left;
+	width: 237px;
+	border-right: 4px solid #cedfef; 
+}
+
+#bottom .portlet dt {
+	margin: 34px 0 0;
+	font-size: 14px;
+	line-height: 26px;
+	text-align: right;
+	padding-right: 16px;
+}
+#bottom .portlet dt a {
+	color: #ffffff;
+}
+#bottom .ergocontrol dt {
+	background-color: #ef9419;
+}
+#bottom .fitform dt {
+	background-color: #0067c6;
+}
+#bottom .preventned dt {
+	background-color: #00204e;
+}
+#bottom .allencarr dt {
+	background-color: #e42c22;
+}	
+
+#bottom .portlet dd {
+	margin: 18px 0 6px 30px;
+}
+
+#bottom .portlet dd ul {
+	list-style: inside disc none;
+}
+#bottom .portlet dd li a {
+	color: #0067c6;
+	font-size: 10px;
+}
+#bottom .portlet dd li.active a {
+	color: #00204e;
+}
+
+

@@ -1,0 +1,2 @@
+recursive-include magazine *
+global-exclude *pyc

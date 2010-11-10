@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/xdv"
+       xmlns:css="http://namespaces.plone.org/xdv+css">
+    <replace css:content="title" css:theme="title" />
+
+    <append css:content="head > base" css:theme="head" />
+    <append css:content="head > meta" css:theme="head" />
+    <append css:content="head > style" css:theme="head" />
+    <append css:content="head > script" css:theme="head" />
+    <append css:content="head > link" css:theme="head" />
+
+    <drop css:if-content="head > style" css:theme="head > style" />
+    <drop css:if-content="head > script" css:theme="head > script" />
+    <drop css:if-content="head > link" css:theme="head > link" />
+
+    <!-- Copy over the id/class attributes on the body tag, this is important
+         for Kupu and per-section styling -->
+    <prepend content="/html/body/@class" theme="/html/body" />
+    <prepend content="/html/body/@id"    theme="/html/body" />	
+    <prepend content="/html/body/@dir"   theme="/html/body" />
+
+    <!-- Logo -->
+    <prepend theme="//*[@id='portal-logo']" content="//*[@id='portal-logo']/@href" /> 
+    <prepend theme="//*[@id='home-link']" content="//*[@id='portal-logo']/@href" /> 
+
+    <!-- Site actions -->
+    <drop css:content="#LSResult" />
+    <replace css:theme="#portal-siteactions" css:content="#portal-siteactions" />
+    <replace css:theme="#portal-searchbox" css:content="#portal-searchbox" />
+
+    <!-- Global navigation -->
+    <copy css:theme="#sitenav" css:content="#portal-globalnav > *" />
+    <!-- subnav? -->
+
+    <!-- drops -->
+    <drop css:content="#portal-breadcrumbs" />
+    <drop css:content="#plone-document-byline" />
+    <drop css:theme="#footer" />
+
+    <!-- structure -->
+    <prepend theme="//*[@id='portal-column-content']" content="//*[@id='portal-column-content']/@class" /> 
+    <replace css:theme="#portal-column-one" css:content="#portal-column-one" />
+    <prepend css:theme="#portal-column-content" css:content="#viewlet-above-content" />
+    <prepend css:theme="#portal-column-content" css:content="#edit-bar" />
+    <replace css:theme="#content" css:content="#content" />
+    <append css:theme="#portal-column-content" css:content="#viewlet-below-content" />
+
+    <!-- homepage -->
+    <!-- copy links -->
+    <prepend theme="//*[@id='portaltab-ergo-control']" content="//*[@id='portaltab-ergo-control']/a/@href" />
+    <prepend theme="//*[@id='portaltab-fit-form']" content="//*[@id='portaltab-fit-form']/a/@href" />
+    <prepend theme="//*[@id='portaltab-preventned']" content="//*[@id='portaltab-preventned']/a/@href" />
+    <prepend theme="//*[@id='portaltab-allen-carr']" content="//*[@id='portaltab-allen-car']/a/@href" /> 
+    
+</rules>

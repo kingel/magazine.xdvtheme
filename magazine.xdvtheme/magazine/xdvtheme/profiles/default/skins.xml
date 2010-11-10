@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="Magazine">
+
+  <skin-path name="Magazine" based-on="FourDigitsBaseXDVTheme" />
+</object>

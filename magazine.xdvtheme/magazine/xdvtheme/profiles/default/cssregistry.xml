@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<object name="portal_css">
+    <stylesheet title="" applyPrefix="False" authenticated="False"
+       cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+       enabled="on" expression="request/HTTP_X_XDV | nothing"
+       id="++resource++fourdigits.basexdvtheme.stylesheets/main.css"
+       media="screen" rel="stylesheet" rendering="import"/>
+    <stylesheet title="" applyPrefix="True" authenticated="False"
+       cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+       enabled="on" expression="request/HTTP_X_XDV | nothing"
+       id="++resource++magazine.static/styles/colors.css" media="screen"
+       rel="stylesheet" rendering="import"/>
+    <stylesheet title="" applyPrefix="True" authenticated="False"
+       cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+       enabled="on" expression="request/HTTP_X_XDV | nothing"
+       id="++resource++magazine.static/styles/forms.css" media="screen"
+       rel="stylesheet" rendering="import"/>
+    <stylesheet title="" applyPrefix="True" authenticated="False"
+       cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+       enabled="False" expression="request/HTTP_X_XDV | nothing"
+       id="++resource++magazine.static/styles/handheld.css"
+       media="handheld, screen" rel="stylesheet" rendering="link"/>
+    <stylesheet title="" applyPrefix="True" authenticated="False"
+       cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+       enabled="on" expression="request/HTTP_X_XDV | nothing"
+       id="++resource++magazine.static/styles/layout.css" media="screen"
+       rel="stylesheet" rendering="link"/>
+    <stylesheet title="" applyPrefix="True" authenticated="False"
+       cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+       enabled="on" expression="request/HTTP_X_XDV | nothing"
+       id="++resource++magazine.static/styles/typography.css" media="screen"
+       rel="stylesheet" rendering="import"/>
+    <stylesheet title="" applyPrefix="True" authenticated="False"
+       cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+       enabled="on" expression="request/HTTP_X_XDV | nothing"
+       id="++resource++magazine.static/styles/uielements.css" media="screen"
+       rel="stylesheet" rendering="import"/>
+    <stylesheet title="" applyPrefix="False" authenticated="False"
+       cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+       enabled="True" expression="request/HTTP_X_XDV | nothing"
+       id="++resource++magazine.static/styles/main.css" media="" rel="stylesheet"
+       rendering="link"/>
+</object>

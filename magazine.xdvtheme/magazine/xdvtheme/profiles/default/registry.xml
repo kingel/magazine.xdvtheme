@@ -1,0 +1,54 @@
+<registry>
+  <record field="enabled"
+          interface="collective.xdv.interfaces.ITransformSettings"
+          name="collective.xdv.interfaces.ITransformSettings.enabled">
+    <value>True</value>
+  </record>
+  <record field="theme"
+          interface="collective.xdv.interfaces.ITransformSettings"
+          name="collective.xdv.interfaces.ITransformSettings.theme">
+    <value>python://magazine.xdvtheme/static/index.html</value>
+  </record>
+  <record field="rules"
+          interface="collective.xdv.interfaces.ITransformSettings"
+          name="collective.xdv.interfaces.ITransformSettings.rules">
+    <value>python://magazine.xdvtheme/rules.xml</value>
+  </record>
+  <record field="absolute_prefix"
+          interface="collective.xdv.interfaces.ITransformSettings"
+          name="collective.xdv.interfaces.ITransformSettings.absolute_prefix">
+    <value>++resource++magazine.static</value>
+  </record>
+  <record field="notheme" interface="collective.xdv.interfaces.ITransformSettings" name="collective.xdv.interfaces.ITransformSettings.notheme">
+    <field type="plone.registry.field.Set">
+      <default>
+        <element>^.*/referencebrowser_popup$</element>
+        <element>^.*/manage_(?!translations_form)[^/]+$</element>
+        <element>^.*/manage$</element>
+        <element>^.*/image_view_fullscreen$</element>
+        <element>^.*/emptypage$</element>
+        <element>^.*/error_log(/.*)?$</element>
+        <element>^.*/aq_parent(/.*)?$</element>
+        <element>^.*/portal_javascripts(/.*)?$</element>
+      </default>
+      <description>Specify paths that should not be styled. May use regular expression syntax</description>
+      <required>False</required>
+      <title>Unstyled paths</title>
+      <value_type type="plone.registry.field.TextLine">
+        <title>Path</title>
+      </value_type>
+    </field>
+    <value>
+      <element>^.*/manage_(?!translations_form)[^/]+$</element>
+      <element>^.*/referencebrowser_popup$</element>
+      <element>^.*/manage$</element>
+      <element>^.*/image_view_fullscreen$</element>
+      <element>^.*/plugins.*$</element>
+      <element>^.*/emptypage$</element>
+      <element>^.*/error_log(/.*)?$</element>
+      <element>^.*/aq_parent(/.*)?$</element>
+      <element>^.*/portal_javascripts(/.*)?$</element>
+    </value>
+  </record>
+
+</registry>
