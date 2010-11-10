@@ -426,7 +426,6 @@ body.section-ergo-control .sl {
 #content {	
 	padding-top: 1px;
 	padding-bottom: 1px;
-	padding-left: 34px;
 	min-height: 270px;
 	}
 
@@ -514,4 +513,17 @@ body.section-ergo-control .sl {
 	color: #00204e;
 }
 
+.template-magazine-view div#left {
+    width: 50%;
+    float:left;
+}
 
+.template-magazine-view div#right {
+    width: 50%;
+    float: left;
+}
+
+.documentByLine {
+    margin-bottom:0.5em;
+    font-size: 80%;
+}

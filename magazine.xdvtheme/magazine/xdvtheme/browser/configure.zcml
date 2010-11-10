@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="ripe.plonetheme">
+
+    <include package="plone.app.contentmenu" />
+
+    <browser:page
+        for="plone.app.folder.folder.IATUnifiedFolder"
+        class=".magazineview.MagazineView"
+        name="magazine-view"
+        template="templates/magazine_view.pt"
+        permission="zope2.View"
+        />
+    <browser:menuItem
+        for="plone.app.folder.folder.IATUnifiedFolder"
+        menu="plone_displayviews"
+        title="Magazine view"
+        action="@@magazine-view"
+        description="Folder Magazine view"
+        />
+</configure>

@@ -34,7 +34,7 @@
 
     <!-- drops -->
     <drop css:content="#portal-breadcrumbs" />
-    <drop css:content="#plone-document-byline" />
+    <!-- drop css:content="#plone-document-byline" /-->
     <drop css:theme="#footer" />
 
     <!-- structure -->

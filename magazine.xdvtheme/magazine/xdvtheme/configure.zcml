@@ -8,7 +8,9 @@
 
   <include package="collective.xdv" />
   <include package="fourdigits.basexdvtheme" />
-
+  
+  <include package=".browser" />
+  
   <interface
       interface=".interfaces.IThemeSpecific"
       type="zope.publisher.interfaces.browser.IBrowserSkinType"
