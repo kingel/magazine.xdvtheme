@@ -3,7 +3,12 @@
        xmlns:css="http://namespaces.plone.org/xdv+css">
     <replace css:content="title" css:theme="title" />
 
-    <append css:content="head > base" css:theme="head" />
+    <!-- Append whatever styles and javascript Plone offers. -->
+     <replace theme="/html/head/base" content="/html/head/base" />
+    <append theme="/html/head" content="/html/head/link | /html/head/style" />
+    <append theme="/html/head" content="/html/head/script" />
+
+<!--    <append css:content="head > base" css:theme="head" />
     <append css:content="head > meta" css:theme="head" />
     <append css:content="head > style" css:theme="head" />
     <append css:content="head > script" css:theme="head" />
@@ -13,11 +18,14 @@
     <drop css:if-content="head > script" css:theme="head > script" />
     <drop css:if-content="head > link" css:theme="head > link" />
 
+-->
     <!-- Copy over the id/class attributes on the body tag, this is important
          for Kupu and per-section styling -->
     <prepend content="/html/body/@class" theme="/html/body" />
     <prepend content="/html/body/@id"    theme="/html/body" />	
     <prepend content="/html/body/@dir"   theme="/html/body" />
+
+    <replace css:theme="#sitename" css:content="#portal-logo" />
 
     <!-- Logo -->
     <prepend theme="//*[@id='portal-logo']" content="//*[@id='portal-logo']/@href" /> 
@@ -28,8 +36,7 @@
     <replace css:theme="#portal-siteactions" css:content="#portal-siteactions" />
     <replace css:theme="#portal-searchbox" css:content="#portal-searchbox" />
 
-    <replace css:theme="#sitename" css:content="#portal-logo" />
-    "
+    
     <!-- Global navigation -->
     <copy css:theme="#sitenav" css:content="#portal-globalnav > *" />
     <!-- subnav? -->
@@ -49,9 +56,9 @@
 
     <!-- homepage -->
     <!-- copy links -->
-    <prepend theme="//*[@id='portaltab-ergo-control']" content="//*[@id='portaltab-ergo-control']/a/@href" />
+    <!-- prepend theme="//*[@id='portaltab-ergo-control']" content="//*[@id='portaltab-ergo-control']/a/@href" />
     <prepend theme="//*[@id='portaltab-fit-form']" content="//*[@id='portaltab-fit-form']/a/@href" />
     <prepend theme="//*[@id='portaltab-preventned']" content="//*[@id='portaltab-preventned']/a/@href" />
-    <prepend theme="//*[@id='portaltab-allen-carr']" content="//*[@id='portaltab-allen-car']/a/@href" /> 
+    <prepend theme="//*[@id='portaltab-allen-carr']" content="//*[@id='portaltab-allen-car']/a/@href" / --> 
     
 </rules>

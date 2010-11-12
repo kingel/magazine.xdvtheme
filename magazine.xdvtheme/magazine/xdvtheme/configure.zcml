@@ -8,8 +8,11 @@
 
   <include package="collective.xdv" />
   <include package="fourdigits.basexdvtheme" />
+  <include package="archetypes.schemaextender" />
   
   <include package=".browser" />
+
+  <adapter factory=".extender.PageExtender" />
   
   <interface
       interface=".interfaces.IThemeSpecific"

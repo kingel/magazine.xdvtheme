@@ -8,7 +8,12 @@
 <body>
     <metal:content-core fill-slot="content-core">
         <!-- metal:content-core define-macro="content-core" -->
-            <div id="left">...</div>
+            <div id="left">
+                    <img src="" alt=""
+                            tal:replace="structure python:view.tag(context, css_class='tileImage posImg')" />
+                       
+                
+            </div>
             <div id="right">
                 
                 <metal:block use-macro="context/standard_view/macros/content-core">
@@ -31,15 +36,22 @@
                                    </div>
                             </a -->
 
-                            <h2 class="tileHeadline"                          
+                            <span class="tileHeadline"                          
                                 metal:define-macro="listitem" />
 
-                                <a href="#"
-                                   class="summary url"
-                                   tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url;" 
-                                   tal:content="obj/Title"
-                                   >
-                                </a>   
+                                <span class="tileMagazinePart" 
+                                      tal:content="obj/magazine_part">
+                                        magazine part
+                                    </span>
+                                <span class="tileTitle">
+                                    <a href="#"
+                                       class="summary url"
+                                       tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url;" 
+                                       tal:content="obj/Title"
+                                       >
+                                    </a>   
+                                </span>
+                                <span class="tileAuthor" tal:content="context/Creator">Author</span>
                                 <div class="tileImage">
                                    <img src="" alt=""
                                         tal:condition="exists:obj/hasContentLeadImage"    
@@ -51,19 +63,19 @@
 
                             <!-- div metal:use-macro="context/standard_view/macros/document_byline"></div-->
 
-                            <p class="tileBody" tal:condition="item_description">
+                            <!-- p class="tileBody" tal:condition="item_description">
                                 <span class="description" tal:content="item_description">
                                     description
                                 </span>
-                            </p>
+                            </p -->
 
-                            <p class="tileFooter">
+                            <!-- p class="tileFooter">
                                 <a href=""
                                    tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url;"
                                    i18n:translate="read_more">
                                 Read More&hellip;
                                 </a>
-                            </p>
+                            </p-->
 
                             <div class="visualClear"><!-- --></div>
                         </div>

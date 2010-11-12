@@ -516,6 +516,14 @@ body.section-ergo-control .sl {
 .template-magazine-view div#left {
     width: 50%;
     float:left;
+
+}
+
+div#left .posImg {
+    vertical-align:middle;
+    display: block;
+    margin: auto;
+    padding: 20px;
 }
 
 .template-magazine-view div#right {
@@ -530,8 +538,10 @@ body.section-ergo-control .sl {
 
 .template-magazine-view div.tileItem {
     float: left;
-    width: 50%;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    width:170px;
+    padding: 8px;
+    overflow-x: hidden;
 }
 
 .template-magazine-view h2 {
@@ -544,6 +554,55 @@ body.section-ergo-control .sl {
     overflow-y: hidden;
 }
 
+.tileAuthor, .tileMagazinePart {
+    
+    display:block;
+}
+
 hr, #socialtools {
     margin-bottom: 0.5em;
+}
+
+/* hurgh :) */
+.template-document_view.section-magazine div#content-core > div{
+    padding-left:195px;
+}
+
+#portal-logo {
+    bottom:0;
+    font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;
+    left:0;
+    margin-bottom:0;
+    text-align:left;
+}
+
+.documentDescription {
+    font-size:18px;
+    font-weight: bold;
+    line-height:1.5;
+    margin:0 0 1em;
+}
+
+.template-magazine-view .tileItem {
+    color:#999999;
+    font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+    font-size:11px;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    letter-spacing:1px;
+    line-height:15px;
+    text-align:left;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+.template-magazine-view .tileTitle {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#ploneimage {
+    
+    font-size:80%;
 }
