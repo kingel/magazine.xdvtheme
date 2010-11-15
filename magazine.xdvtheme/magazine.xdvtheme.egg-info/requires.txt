@@ -1,2 +1,4 @@
 setuptools
 fourdigits.basexdvtheme
+z3c.jbot
+plone.app.contentlisting

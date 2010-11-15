@@ -26,6 +26,8 @@ setup(name='magazine.xdvtheme',
       install_requires=[
           'setuptools',
           'fourdigits.basexdvtheme',
+          'z3c.jbot',
+          'plone.app.contentlisting',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
