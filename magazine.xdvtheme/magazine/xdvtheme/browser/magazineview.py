@@ -30,7 +30,8 @@ class MagazineView(BrowserView):
         self.request = request
 
     def results(self):
-        return IContentListing(self.context.getFolderContents())
+        return IContentListing(self.context.getFolderContents(
+                                   {'portal_type': 'FolderishDocument'}))
 
     @property
     def prefs(self):
