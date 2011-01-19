@@ -606,3 +606,19 @@ hr, #socialtools {
     
     font-size:80%;
 }
+
+#sitenav a {
+	color: #6c5e57;
+	}
+
+#portal-logo a {
+	color: #dcd2d9;
+	}
+
+#content-core p {
+	color: #6c5e57;
+}
+
+.tileTitle a {
+	color: #6c5e57;
+}
