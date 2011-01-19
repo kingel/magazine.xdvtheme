@@ -51,7 +51,7 @@
                                        >
                                     </a>   
                                 </span>
-                                <span class="tileAuthor" tal:content="context/Creator">Author</span>
+                                <span class="tileAuthor" tal:content="python:obj.Creator()">Author</span>
                                 <div class="tileImage">
                                    <img src="" alt=""
                                         tal:condition="exists:obj/hasContentLeadImage"    
