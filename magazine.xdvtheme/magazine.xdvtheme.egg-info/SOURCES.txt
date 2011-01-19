@@ -35,7 +35,6 @@ magazine/xdvtheme/profiles/default/jsregistry.xml
 magazine/xdvtheme/profiles/default/metadata.xml
 magazine/xdvtheme/profiles/default/registry.xml
 magazine/xdvtheme/profiles/default/skins.xml
-magazine/xdvtheme/profiles/default/types/FolderishDocument.xml
 magazine/xdvtheme/static/index.html
 magazine/xdvtheme/static/javascripts/modernizr-1.5.min.js
 magazine/xdvtheme/static/styles/colors.css

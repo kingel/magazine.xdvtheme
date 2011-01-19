@@ -26,6 +26,22 @@
         action="@@magazine-view"
         description="Folder Magazine view"
         />
+
+    <browser:page
+        for="plone.app.folder.folder.IATUnifiedFolder"
+        class=".frontpageview.FrontpageView"
+        name="frontpage-view"
+        template="templates/frontpage_view.pt"
+        permission="zope2.View"
+        />
+
+    <browser:menuItem
+        for="plone.app.folder.folder.IATUnifiedFolder"
+        menu="plone_displayviews"
+        title="Frontpage view"
+        action="@@frontpage-view"
+        description="Folder Frontpage view"
+        />
     
     <browser:page
          name="standard_view"

@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+<body>
+    <metal:content-title fill-slot="content-title">
+    </metal:content-title>
+    <metal:content-core fill-slot="content-core">
+        <!-- metal:content-core define-macro="content-core" -->
+            <div id="left" style="float:left; width: 50%;">
+	    	<center>
+		<a href="" tal:attributes="href python:context.aq_parent['blog'].absolute_url()">
+                    <img src="" alt=""
+                            tal:replace="structure python:view.tag(context.aq_parent['blog'], css_class='tileImage posImg')" />
+                </a>       
+               </center> 
+            </div>
+            <div id="right" style="float: right;width: 50%;" >
+               <center> 
+		<a href="" tal:attributes="href python:context.aq_parent['magazine-1'].absolute_url()">
+                    <img src="" alt=""
+                            tal:replace="structure python:view.tag(context.aq_parent['magazine-1'], css_class='tileImage posImg')" />
+		</a>
+                </center>
+            </div>
+            <div id="visualClear"><!-- --></div>
+        </metal:content-core>
+    <!-- /metal:content-core -->
+</body>
+</html>
